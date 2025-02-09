@@ -203,6 +203,10 @@
   }
 }
 @layer layout {
+  /*select every thing except the first direct child*/
+  .flow > * + * {
+    margin-top: var(--flow-spacer, 1em);
+  }
   .equal-coulmns {
     display: grid;
     gap: var(--equal--columns--gap, 1rem);
@@ -270,6 +274,9 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+  .text-center {
+    text-align: center;
   }
   /* primitives here */
   .text-main {
