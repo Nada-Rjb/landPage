@@ -200,17 +200,35 @@
   }
 }
 @layer layout {
-  .wrapper {
-    max-width: 1130px;
-    margin-inline: auto;
-    padding-inline: 1rem;
-    /*to make thw width the same */
-    box-sizing: content-box;
-    &[data-with="wide"] {
-      max-width: 1130px;
+  .section {
+    --pading: 3.75rem;
+    padding-block: var(--pading);
+    @media (min-width: 760px) {
+      --pading: 8rem;
+      &[data-padding="compact"] {
+        --pading: 4.5rem;
+      }
     }
   }
 }
+.wrapper {
+  --wraper--max--width: 1130px;
+  --wrapper-padding: 1rem;
+
+  max-width: var(--wraper--max--width);
+  margin-inline: auto;
+  padding-inline: var(--wrapper-padding);
+  /*to make thw width the same */
+  box-sizing: content-box;
+
+  &[data-width="wide"] {
+    --wrapper-max-width: 1330px;
+  }
+  &[data-width="narrow"] {
+    --wraper--max--width: 720px;
+  }
+}
+
 @layer utilities {
   .visually-hidden {
     clip: rect(0 0 0 0);
@@ -220,5 +238,59 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+  /* primitives here */
+  .text-main {
+    color: var(--text-main);
+  }
+  .text-high-contrast {
+    color: var(--text-high-contrast);
+  }
+  .text-high-contrast {
+    color: var(--text-high-contrast);
+  }
+  .text-brand {
+    color: var(--text-brand);
+  }
+  .text-brand-light {
+    color: var(--text-brand-light);
+  }
+  .background-accent-light {
+    background-color: var(--background-accent-light);
+  }
+  .background-accent-main {
+    background-color: var(--background-accent-main);
+  }
+  .background-accent-dark {
+    background-color: var(--background-accent-dark);
+  }
+  .background-extra-light {
+    background-color: var(--background-extra-light);
+  }
+  .background-main {
+    background-color: var(--background-main);
+  }
+  .background-dark {
+    background-color: var(--background-dark);
+  }
+  .background-extra-dark {
+    background-color: var(--background-extra-dark);
+  }
+
+  .background-accent {
+    background-color: var(--background-accent-dark);
+  }
+
+  .font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+  .font-size-regular {
+    font-size: var(--font-size-regular);
+  }
+  .font-size-md {
+    font-size: var(--font-size-md);
+  }
+  .font-size-lg {
+    font-size: var(--font-size-lg);
   }
 }
