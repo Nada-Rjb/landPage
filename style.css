@@ -255,6 +255,10 @@
   .text-brand-light {
     color: var(--text-brand-light);
   }
+  .section-title {
+    font-size: var(--font-size-heading-regular);
+  }
+
   .background-accent-light {
     background-color: var(--background-accent-light);
   }
