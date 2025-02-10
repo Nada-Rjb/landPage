@@ -289,7 +289,9 @@
       border-radius: 0;
     }
   }
-
+  [area-control="primary-navigation"] {
+    display: none;
+  }
   .primary-nav {
     ul {
       list-style: none;
@@ -304,6 +306,7 @@
     }
 
     @media (width < 760px) {
+      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -335,6 +338,15 @@
       a:focus-visible {
         color: #f59c5c;
       }
+    }
+  }
+  /*any thing that come that is direct sibling */
+  @media (width < 760px) {
+    [area-control="primary-navigation"] {
+      display: block;
+    }
+    [area-expanded="true"] ~ .primary-nav {
+      display: block;
     }
   }
   .site-footer {
