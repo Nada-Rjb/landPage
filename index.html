@@ -15,14 +15,18 @@
   <body>
     <header class="site-header">
       <!-- TO DO: overwrite padding -->
-      <div class="wrapper">
+      <div class="wrapper" data-width="wide">
         <div class="site-header__inner">
           <img
-            src="assets\imges\elfateh.jpg"
+            src="assets/imges/elfateh.jpg"
             alt="El Fateh"
             style="max-inline-size: 60px"
           />
-          <nav class="primary-nav">
+          <button area-control="primary-navigation" area-expanded="false">
+            <span class="visually-hidden">Menue</span>
+            <img src="assets/imges/hamburger.svg" alt="menue" />
+          </button>
+          <nav id="primary-navigation" class="primary-nav">
             <ul role="list">
               <li><a href="/">الرئيسية</a></li>
               <li><a href="#">الخدمات</a></li>
@@ -167,5 +171,6 @@
       <p class="site-footer--title">تواصل معنا</p>
       <a href="mailto:enadaragab@gmail.com">enadaragab@gmail.com</a>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
