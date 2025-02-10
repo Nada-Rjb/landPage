@@ -393,6 +393,7 @@
   }
   .hero--title {
     font-size: var(--font-size-heading-lg);
+    color: var(--clr-white);
 
     span {
       font-size: var(--font-size-heading-xl);
