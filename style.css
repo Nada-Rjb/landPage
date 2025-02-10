@@ -98,9 +98,10 @@
   :root {
     --clr-white: #ffffff;
     --clr-gray-100: #cdcdcd;
-    --clr-gray-200: #f1f4f1;
+    --clr-gray-200: #f5f5f5;
     --clr-brand-400: #f7b687;
     --clr-brand-500: #f59c5c;
+    --clr-green-300: #98d7b0;
     --clr-green-400: #659577;
     --clr-green-500: #3a8256;
     --clr-green-600: #223f2e;
@@ -145,7 +146,7 @@
     --text-high-contrast: var(--clt-black);
     --text-brand: var(--clr-brand-500);
     --text-brand-light: var(--clr-brand-400);
-
+    --background-accent-more-light: var(--clr-green-300);
     --background-accent-light: var(--clr-green-400);
     --background-accent-main: var(--clr-green-500);
     --background-accent-dark: var(--clr-green-600);
@@ -196,11 +197,11 @@
     font-size: var(--font-size-heading-lg);
   }
   a {
-    color: var(--text-high-contrast);
+    color: var(--clr-gray-200);
   }
   a:hover,
   a:focus-visible {
-    color: #d22d2f;
+    color: #f59c5c;
   }
   img {
     border-radius: var(--border-radius-3);
@@ -273,6 +274,25 @@
     display: flex;
     gap: 0.5rem 1rem;
   }
+  .site-footer {
+    display: grid;
+    background: var(--background-accent-dark);
+    text-align: center;
+    padding-block: 2rem;
+    gap: 2rem;
+    a {
+      color: var(--clr-gray-200);
+    }
+    a:hover,
+    a:focus-visible {
+      color: var(--text-brand);
+    }
+  }
+  .site-footer--title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+  }
+
   .hero {
     text-align: center;
     font-size: var(--font-size-md);
@@ -304,6 +324,22 @@
   .card--title {
     font-size: var(--card-title-font-size, var(--font-size-regular));
     color: var(--card-title-color, var(--text-brand));
+  }
+  .button {
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-accent-light);
+    font-family: var(--ff-arabic);
+    font-weight: 700;
+    border-radius: var(--border-radius-2);
+  }
+  .button:hover,
+  .button:focus-visible {
+    color: var(--text-brand);
+    background-color: var(--background-accent-main);
   }
 }
 
@@ -363,7 +399,7 @@
     background-color: var(--background-dark);
   }
   .background-extra-dark {
-    background-color: var(--clr-gray-100);
+    background-color: var(--clr-gray-200);
   }
 
   .background-accent {
