@@ -31,7 +31,13 @@ function updateFilter(event) {
   currentfilter[filterType] = event.target.value;
   //   console.log(event.target.id);
   //   console.log(event.target.value);
-  filterCard();
+  // filterCard();
+  //if transation dosent support by browser
+  if (!document.startViewTransition()) {
+    filterCard();
+  }
+  //if transation support
+  document.startViewTransition(() => filterCard());
 }
 //card base in selected
 function filterCard() {
