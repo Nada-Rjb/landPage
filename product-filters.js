@@ -1,7 +1,7 @@
 const card = document.querySelectorAll(".products-guide .card");
 const cheesefilter = document.querySelector("#cheese_type");
 const processingfilter = document.querySelector("#processing");
-
+const noresult = document.querySelectorAll(".no-results-message");
 // object to track which filter selected
 const currentfilter = {
   cheese_type: "all",
@@ -36,6 +36,8 @@ function updateFilter(event) {
 //card base in selected
 function filterCard() {
   console.log("csdcsdvcdf");
+  let visablecards = false;
+
   //for each card do some thing on it
   card.forEach((card) => {
     //console.log(card);
@@ -53,8 +55,16 @@ function filterCard() {
       (matctprocessing || currentfilter.processing === "all")
     ) {
       card.hidden = false;
+      visablecards = true;
     } else {
       card.hidden = true;
+    }
+    console.log(visablecards);
+
+    if (visablecards) {
+      noresult.hidden = true;
+    } else {
+      noresult.hidden = false;
     }
   });
 }
