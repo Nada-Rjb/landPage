@@ -7,6 +7,12 @@ const currentfilter = {
   cheese_type: "all",
   processing: "all",
 };
+//give id to each card in html
+card.forEach((card, index) => {
+  const prouductId = `prouduct-${index + 1}`;
+  //card.setAttribute("data-product-id", prouductId);
+  card.style.viewTransitionName = `card-${prouductId}`;
+});
 
 // cheesefilter.addEventListener("change", (event) => {
 //   console.log(event.target.value);
@@ -35,6 +41,7 @@ function updateFilter(event) {
   //if transation dosent support by browser
   if (!document.startViewTransition()) {
     filterCard();
+    return;
   }
   //if transation support
   document.startViewTransition(() => filterCard());
