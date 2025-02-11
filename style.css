@@ -429,6 +429,49 @@
     font-size: var(--card-title-font-size, var(--font-size-regular));
     color: var(--card-title-color, var(--text-brand));
   }
+  /* for second padge card in selection */
+  .tag-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    li {
+      padding: 0.125rem 0.25rem;
+      /*custom tag*/
+      background-color: var(--tag-bg, red);
+      font-family: var(--ff-alt);
+      color: var(--text-high-contrast);
+      font-size: var(--font-size-sm);
+      border-radius: var(--border-radius-1);
+    }
+    /* back ground for each selection  */
+    /*فكيمه*/
+    [data-processing="vacuum-sealed"] {
+      --tag-bg: var(--background-accent-light);
+    }
+    /* بشر*/
+    [data-processing="grated"] {
+      --tag-bg: var(--clr-brand-400);
+    }
+
+    [cheese-type="another-prouduct"] {
+      --tag-bg: var(--clr-gray-100);
+    }
+    /*تنشير*/
+    [data-processing="sliced"] {
+      --tag-bg: var(--background-accent-light);
+    }
+
+    [data-cheese-type="fresh"] {
+      --tag-bg: var(--background-accent-light);
+    }
+    [data-cheese-type="aged"] {
+      --tag-bg: var(--clr-teal-500);
+    }
+    [data-cheese-type="medium"] {
+      --tag-bg: var(--clr-brand-500);
+    }
+  }
   .button {
     text-decoration: none;
     font-size: var(--font-size-md);
