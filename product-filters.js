@@ -68,3 +68,10 @@ function filterCard() {
     }
   });
 }
+
+//function enable filter when the user have peoblem in css
+function enableFeltering() {
+  processingfilter.hidden = false;
+  cheesefilter.hidden = false;
+}
+enableFeltering();
