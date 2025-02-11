@@ -240,7 +240,7 @@
     align-content: start;
     justify-items: start;
   }
-  .grid-auto-fit {
+  .grid-auto-fill {
     display: grid;
     gap: 1rem;
     --auto-fit-min-col-size: 300px;
@@ -248,7 +248,7 @@
     /*depend one size avaliple auto fit */
     /*for small number 100%*/
     grid-template-columns: repeat(
-      auto-fit,
+      auto-fill,
       minmax(min(var(--auto-fit-min-col-size), 100%), 1fr)
     );
   }
