@@ -188,6 +188,13 @@
     font-family: var(--ff-arabic);
     line-height: 1.6;
   }
+  /* he rule ensures that the animation behavior is applied only when the user has */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     font-size: var(--font-size-regular);
     color: var(--text-main);
@@ -236,7 +243,7 @@
   .grid-auto-fit {
     display: grid;
     gap: 1rem;
-    --auto-fit-min-col-size: 250px;
+    --auto-fit-min-col-size: 300px;
 
     /*depend one size avaliple auto fit */
     /*for small number 100%*/
@@ -630,6 +637,9 @@
     background-color: var(--background-extra-light);
   }
 
+  .background-gray {
+    background-color: var(--gray-main);
+  }
   .back-ground-card {
     background-color: var(--back-ground-card);
   }
