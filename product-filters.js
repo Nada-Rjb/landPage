@@ -1,7 +1,7 @@
 const card = document.querySelectorAll(".products-guide .card");
 const cheesefilter = document.querySelector("#cheese_type");
 const processingfilter = document.querySelector("#processing");
-const noresult = document.querySelectorAll(".no-results-message");
+const noresult = document.querySelector(".no-results-message");
 // object to track which filter selected
 const currentfilter = {
   cheese_type: "all",
