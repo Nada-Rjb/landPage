@@ -414,6 +414,13 @@
       display: block;
     }
   }
+
+  /*for second page prouduct guide and use custom componant from card in page one*/
+  .products-guide {
+    --card-title-font-size: var(--font-size-lg);
+    --card-title-color: var(--text-high-contrast);
+    --card-gap: 00.75rem;
+  }
   .card {
     padding: 1rem;
     display: flex;
