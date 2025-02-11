@@ -217,6 +217,11 @@
   }
 }
 @layer layout {
+  .flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
   /*select every thing except the first direct child*/
   .flow > * + * {
     margin-top: var(--flow-spacer, 1em);
