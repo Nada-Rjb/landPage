@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Fateh</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Badeen+Display&family=Cairo:wght@200..1000&family=Noto+Kufi+Arabic:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skipp-to-header" class="wrapper" href="#main">تخطى</a>
+    <header class="site-header">
+      <!-- TO DO: overwrite padding -->
+      <div style="margin-inline: 2rem" data-width="wide">
+        <div class="site-header__inner">
+          <img
+            src="assets/imges/elfateh.jpg"
+            alt="El Fateh"
+            style="max-inline-size: 60px"
+          />
+          <button area-control="primary-navigation" area-expanded="false">
+            <span class="visually-hidden">Menue</span>
+            <img src="assets/imges/hamburger.svg" alt="menue" />
+          </button>
+          <nav id="primary-navigation" class="primary-nav">
+            <ul role="list">
+              <li><a href="/">الرئيسية</a></li>
+              <li><a href="#">الخدمات</a></li>
+              <li><a href="#">من نحن </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero flow section" data-padding="compact">
+        <div class="wrapper" id="main">
+          <h1 class="hero--title">
+            رحلتك إلى <span> أفضل</span> الأجبان التركية
+          </h1>
+        </div>
+        <div class="wrapper" data-width="narrow">
+          <div class="flow hidden">
+            <p>
+              اكتشف تشكيلة واسعة من الأجبان التركية الفريدة، التي تلبي احتياجات
+              الخبازين ومحبي الأجبان بنكهتها وجودتها العالية. سواء كنت تبحث عن
+              الجبن الطازج، المعتق أو متوسط النضج، أو حتى منتجات السمن الطبيعية،
+              لدينا ما يناسب جميع الأذواق.
+            </p>
+            <p style="visibility: hidden">
+              بفضل تقنيات التصنيع الحديثة والمكونات الطبيعية، نحن نضمن لك الحصول
+              على منتجات طازجة تمامًا، مليئة بالنكهات المميزة. اختر الأفضل
+              لمخبزك وكن واثقًا من أننا نقدم لك الأفضل دائمًا، مباشرة إلى بابك.
+            </p>
+            <p style="visibility: hidden">
+              نحن في شركة "الفاتح" نفخر بتوفير منتجات الألبان الطازجة والمخبوزات
+              عالية الجودة للمخابز المحلية. نحرص على تزويدكم بأفضل أنواع الجبن،
+              الزبدة، والقشدة التي تستخدمونها في تحضير منتجاتكم المخبوزة. بفضل
+              شراكتنا الوثيقة مع المخابز، نحن نضمن توفير منتجات متميزة وطازجة
+              تساعدكم في تقديم أشهى الخبز والمعجنات لعملائكم، مع الالتزام
+              بالجودة والمذاق الرائع في كل منتج.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- the second section of page factory cheese   -->
+      <section class="background-accent-light section">
+        <div class="wrapper" data-width="wide">
+          <div class="equal-coulmns" data-gap="large" data-align="center">
+            <div>
+              <img src="assets/imges/cheesefactory.jpg" />
+            </div>
+            <div class="flow font-size-lg">
+              <h2 class="section-title">أين تجد أفضل الجبن التركي؟</h2>
+              <p>
+                تتضمن تشكيلتنا جبن وسط، قديم، وطازج بالإضافة إلى جبن الموزاريلا،
+                البراميلي والإسطانبولي والسمن الطبيعي.
+              </p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sectio type of products -->
+      <section class="section cheese-guide">
+        <div class="wrapper flow">
+          <h2 class="section-title">تعرّف على منتجات الجبن لدينا</h2>
+          <div>
+            <select name="cheese-type" id="cheese-type">
+              <option value="all">النوع: الكل</option>
+              <option value="medium">متوسط العمر</option>
+              <option value="aged">قديم</option>
+              <option value="fresh">طازج</option>
+              <option value="another-prouduct">منتجات أخرى</option>
+            </select>
+            <select name="processing" id="processing">
+              <option value="all">معالجة: الكل</option>
+              <option value="grated">مبشور</option>
+              <option value="sliced">تنشير</option>
+              <option value="vacuum-sealed">مجفف</option>
+            </select>
+            <select name="other-products" id="other-products"></select>
+          </div>
+
+          <div class="grid-auto-fill">
+            <div class="card">
+              <h3 class="card__title">جبن قديم</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="vacuum-sealed">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  مغلق بتفريغ الهواء
+                </li>
+                <li data-cheese-type="aged">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  قديم
+                </li>
+              </ul>
+
+              <p>نكهة غنية وقوية، مثالية للأطباق الراقية.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في بيئة باردة للحفاظ على
+                الجودة.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">جبن رومي مبشور</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="grated">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  مبشور
+                </li>
+                <li data-cheese-type="aged">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  قديم
+                </li>
+              </ul>
+
+              <p>مثالي لإضافة نكهة قوية إلى المعكرونة والمخبوزات.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُستخدم سريعًا للحفاظ على
+                الطراوة.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">جبن رومي مجفف</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="vacuum-sealed">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  مجفف
+                </li>
+                <li data-cheese-type="aged">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  قديم
+                </li>
+              </ul>
+
+              <p>مثالي للتخزين طويل الأمد بنكهة قوية ومركزة.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في مكان جاف للحفاظ على
+                النكهة.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">جبن طازج</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="sliced">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  تنشير
+                </li>
+                <li data-cheese-type="fresh">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  طازج
+                </li>
+              </ul>
+
+              <p>خفيف وكريمي، مثالي للاستخدام اليومي.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُستهلك خلال فترة قصيرة للحصول
+                على أفضل طعم.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">جبن متوسط العمر تنشير</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="sliced">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  تنشير
+                </li>
+                <li data-cheese-type="medium">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  متوسط العمر
+                </li>
+              </ul>
+
+              <p>مناسب للسندويشات والأطباق بفضل نكهته المتوازنة.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في الثلاجة ويُستهلك سريعًا
+                بعد الفتح.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">عسل طبيعي</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص المنتج">
+                <li cheese-type="another-prouduct">
+                  <span class="visually-hidden">هذا المنتج</span>
+                  عسل
+                </li>
+              </ul>
+
+              <p>عسل طبيعي نقي مثالي للتحلية والاستخدامات الصحية.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في مكان جاف وبارد.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">بسطرمة</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص المنتج">
+                <li cheese-type="another-prouduct">
+                  <span class="visually-hidden">هذا المنتج</span>
+                  بسطرمة
+                </li>
+              </ul>
+
+              <p>
+                لحوم مجففة بنكهة مميزة، مثالية للسندويشات والأطباق الجانبية.
+              </p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> تُحفظ في الثلاجة للحفاظ على
+                الجودة.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">كيري</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص المنتج">
+                <li cheese-type="another-prouduct">
+                  <span class="visually-hidden">هذا المنتج</span>
+                  كيري
+                </li>
+              </ul>
+
+              <p>جبن كريمي غني بالنكهة، مناسب للدهن والاستخدامات المتنوعة.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في الثلاجة للحفاظ على
+                النكهة.
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">كيري</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص المنتج">
+                <li cheese-type="another-prouduct">
+                  <span class="visually-hidden">هذا المنتج</span>
+                  كيري
+                </li>
+              </ul>
+
+              <p>جبن كريمي غني بالنكهة، مناسب للدهن والاستخدامات المتنوعة.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في الثلاجة للحفاظ على
+                النكهة.
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">جبن رومي مجفف</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="vacuum-sealed">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  مجفف
+                </li>
+                <li data-cheese-type="aged">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  قديم
+                </li>
+              </ul>
+
+              <p>مثالي للتخزين طويل الأمد بنكهة قوية ومركزة.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في مكان جاف للحفاظ على
+                النكهة.
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">جبن قديم</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="vacuum-sealed">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  مغلق بتفريغ الهواء
+                </li>
+                <li data-cheese-type="aged">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  قديم
+                </li>
+              </ul>
+
+              <p>نكهة غنية وقوية، مثالية للأطباق الراقية.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في بيئة باردة للحفاظ على
+                الجودة.
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">جبن قديم</h3>
+              <ul class="tag-list" role="list" aria-label="خصائص الجبن">
+                <li data-processing="vacuum-sealed">
+                  <span class="visually-hidden">هذا الجبن</span>
+                  مغلق بتفريغ الهواء
+                </li>
+                <li data-cheese-type="aged">
+                  <span class="visually-hidden">نوع هذا الجبن</span>
+                  قديم
+                </li>
+              </ul>
+
+              <p>نكهة غنية وقوية، مثالية للأطباق الراقية.</p>
+              <p class="card__note">
+                <strong>ملاحظات هامة:</strong> يُحفظ في بيئة باردة للحفاظ على
+                الجودة.
+              </p>
+            </div>
+          </div>
+
+          <div class="no-results-message" hidden>
+            لا توجد منتجات تطابق هذه الفلاتر.
+          </div>
+        </div>
+      </section>
+
+      <!-- faq  4card-->
+      <section class="section">
+        <div class="wrapper">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="assets\imges\c21.webp" alt="عملية فكيم الجبن" />
+            <h3 class="card--title">فكيم الجبن الرومي</h3>
+            <p>
+              نقوم بعملية فكيم الجبن الرومي باستخدام أحدث تقنيات التفريغ الهوائي
+              للحفاظ على جودة وطراوة الجبن.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="assets\imges\c22.webp" alt="بشر الجبن" />
+            <h3 class="card--title">بشر الجبن</h3>
+            <p>
+              خدمة بشر الجبن بجودة عالية لمساعدتك في تجهيز المخبوزات والأطعمة
+              بسهولة وسرعة.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="assets\imges\c23.jpg" alt="تنشير الجبن الرومي" />
+            <h3 class="card--title">تنشير الجبن الرومي</h3>
+            <p>
+              تقنية دقيقة لتنشير الجبن الرومي مع الحفاظ على النكهة المميزة
+              والجودة المطلوبة.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="assets\imges\c24.webp" alt="منتجاتنا المتنوعة" />
+            <h3 class="card--title">منتجات متنوعة</h3>
+            <p>
+              نوفر مجموعة متنوعة من الأجبان مثل الموزاريلا، البراميلي،
+              الإسطانبولي والسمن الطبيعي.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p class="site-footer--title">تواصل معنا</p>
+      <a href="mailto:enadaragab@gmail.com">enadaragab@gmail.com</a>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
