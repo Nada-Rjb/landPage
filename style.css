@@ -359,17 +359,24 @@
     }
 
     @media (width < 760px) {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: var(--font-size-lg);
-      background-color: var(--background-accent-main);
-      z-index: 10;
-      padding: 2rem;
-      font-weight: 700;
-      border-radius: 0 0 var(--border-radius-3) 0;
-
+      /* add & to turn on highlight color in code in vs*/
+      & {
+        display: none;
+        opacity: 0;
+        /**/
+        transition: opacity 1s, display 1s;
+        /**/
+        transition-behavior: allow-discrete;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: var(--font-size-lg);
+        background-color: var(--background-accent-main);
+        z-index: 10;
+        padding: 2rem;
+        font-weight: 700;
+        border-radius: 0 0 var(--border-radius-3) 0;
+      }
       ul {
         display: flex;
         gap: 0;
@@ -400,6 +407,10 @@
     }
     [area-expanded="true"] ~ .primary-nav {
       display: block;
+      opacity: 1;
+      @starting-style {
+        opacity: 0;
+      }
     }
   }
   .site-footer {
