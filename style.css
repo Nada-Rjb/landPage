@@ -639,6 +639,11 @@
   [hidden] {
     display: none;
   }
+  .resizing * {
+    transition: none ;
+    /*if i have animation pause when resize */
+    animation-play-state: paused;
+  }
   .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
