@@ -318,6 +318,9 @@
   }
   .site-header {
     padding-block: 0.5rem;
+    /*overflow-x: hidden;*/
+    overflow-x: clip;
+    position: relative;
 
     a {
       color: var(--clt-black);
