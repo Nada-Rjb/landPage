@@ -467,6 +467,11 @@
     background-image: url(assets/imges/backOpacity.png);
     background-size: cover;
     background-position: center;
+    animation: fade-out;
+    animation-timeline: view();
+    animation-range-start: exit;
+
+
   }
   .hero--title {
     font-size: var(--font-size-heading-lg);
@@ -574,7 +579,7 @@
     li {
       padding: 0.125rem 0.25rem;
       /*custom tag*/
-      background-color: var(--tag-bg, red);
+      background-color: var(--tag-bg, rgb(176, 113, 113));
       font-family: var(--ff-alt);
       color: var(--text-high-contrast);
       font-size: var(--font-size-sm);
@@ -720,5 +725,13 @@
   }
   .font-size-lg {
     font-size: var(--font-size-lg);
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
