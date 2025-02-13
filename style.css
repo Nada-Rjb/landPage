@@ -442,18 +442,35 @@
     }
   }
   .site-footer {
-    display: grid;
+    display: flex;
     background: var(--background-accent-dark);
     text-align: center;
     padding-block: 2rem;
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
     a {
       color: var(--clr-gray-200);
+      text-decoration: none;
+
     }
     a:hover,
     a:focus-visible {
       color: var(--text-brand);
     }
+    ul li {
+      margin-block: 1rem;
+      display: flex;
+        gap: 10px;
+        align-items: flex-start;    }
+    ul li:nth-child(1),
+    ul li:nth-child(2) {
+      justify-content: center;
+    }
+    
+   
+}
   }
   .site-footer--title {
     font-size: var(--font-size-lg);
@@ -638,7 +655,7 @@
     border: 0;
     border-radius: var(--border-radius-2);
   }
-}
+
 
 @layer utilities {
   [hidden] {
