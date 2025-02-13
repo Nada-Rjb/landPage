@@ -659,9 +659,10 @@
 
 
 @layer utilities {
-  [hidden] {
-    display: none;
-  }
+ [hidden] {
+  display: none !important;
+}
+
   .resizing * {
     transition: none ;
     /*if i have animation pause when resize */
