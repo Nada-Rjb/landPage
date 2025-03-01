@@ -379,7 +379,6 @@
         background-color: var(--background-accent-main);
         z-index: 10;
         padding: 2rem;
-        font-weight: 700;
         border-radius: 0 0 var(--border-radius-3) 0;
       }
       ul {
